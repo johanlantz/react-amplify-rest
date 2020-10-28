@@ -22,5 +22,13 @@
         }
       ]
     }
+  },
+  "auth": {
+    "amplifyrest0700d899": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
   }
 }

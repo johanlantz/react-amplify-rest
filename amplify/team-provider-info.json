@@ -10,6 +10,11 @@
       "StackName": "amplify-amplifyrest-dev-122509",
       "StackId": "arn:aws:cloudformation:eu-west-1:466214412545:stack/amplify-amplifyrest-dev-122509/3e149700-1910-11eb-a04d-0aae7861399e",
       "AmplifyAppId": "droikjgsrdt7t"
+    },
+    "categories": {
+      "auth": {
+        "amplifyrest0700d899": {}
+      }
     }
   }
 }
