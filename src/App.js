@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Amplify from 'aws-amplify';
+//import { AmplifyAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+import { AuthState, onAuthUIStateChange } from '@aws-amplify/ui-components';
+import awsconfig from './aws-exports';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+Amplify.configure(awsconfig);
 
-export default App;
+const onBtnClick = () => {
+  fetch("https://tzf1sbnlo9.execute-api.eu-west-1.amazonaws.com/dev/todo")
+  .then(response => response.json())
+  .then(data => console.log(data))
+};
+
+const App = () => (
+  <div>
+    <AmplifySignOut />
+    <input type="button" onClick={onBtnClick}></input>
+  </div>
+);
+
+export default withAuthenticator(App);
