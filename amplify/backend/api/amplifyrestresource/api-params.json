@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/todo",
+            "lambdaFunction": "todolambdaforrestamplify",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/todo"
+        }
+    ],
+    "resourceName": "amplifyrestresource",
+    "apiName": "amplifyrestresource",
+    "functionArns": [
+        {
+            "lambdaFunction": "todolambdaforrestamplify"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-amplifyrest-dev-122509-authRole",
+        "unAuthRoleName": "amplify-amplifyrest-dev-122509-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "todolambdaforrestamplify",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
