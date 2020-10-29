@@ -69,7 +69,7 @@
         "Timeout": "25",
         "Code": {
           "S3Bucket": "amplify-amplifyrest-dev-122509-deployment",
-          "S3Key": "amplify-builds/todolambdaforrestamplify-73427852435454615163-build.zip"
+          "S3Key": "amplify-builds/todolambdaforrestamplify-52643368476433332f68-build.zip"
         }
       }
     },
